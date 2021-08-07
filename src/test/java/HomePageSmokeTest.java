@@ -4,13 +4,13 @@
 
 
         public class HomePageSmokeTest extends BaseClass{
-        public PreLoginButtons pgeobj;
+        //public PreLoginButtons pgeobj;
 
     @Test
     public void HomePageButtons() {
 
         try {
-            pgeobj = PageFactory.initElements(driver, PreLoginButtons.class);
+            PreLoginButtons pgeobj = new PreLoginButtons();
             driver.get("https://qa-hive-swarmio.swarmio.gg/");
             driver.manage().window().maximize();
             String ActualTitle = driver.getTitle();
@@ -40,7 +40,7 @@
             pgeobj.ClickJoinNow();
             System.out.println(pgeobj.ClickJoinNow());
 
-            driver.close();
+            //driver.close();
         }
         catch (Exception e) {
             System.out.println(e);
