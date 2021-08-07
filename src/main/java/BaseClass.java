@@ -42,7 +42,7 @@ public class BaseClass {
         opt.setHeadless(true);
         driver = new ChromeDriver(opt);
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);*/
-        driver.get("https://www.lambdatest.com/support/docs/lambda-tunnel-for-corporate-firewalls-enterprise-restricted-environments/");
+        //driver.get("https://www.lambdatest.com/support/docs/lambda-tunnel-for-corporate-firewalls-enterprise-restricted-environments/");
 
         Thread.sleep(2000);
     }
