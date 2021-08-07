@@ -15,8 +15,8 @@ build:
   script:
     - mvn compile
   tags:
-    - cluster
-    - kubernetes
+    - docker
+    - gce
   artifacts:
     when: always
     reports:
@@ -29,8 +29,8 @@ test:
   script:
     - mvn clean test
   tags:
-    - cluster
-    - kubernetes
+    - docker
+    - gce
   artifacts:
     when: always
     reports:
