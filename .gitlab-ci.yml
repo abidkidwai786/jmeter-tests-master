@@ -3,8 +3,8 @@ image: maven:3.3.9-jdk-8
 before_script:
   - |
     cd /builds/earl/jmeter-tests
-    echo 'export LT_USERNAME=earlswarmio' >> ~/.bashrc
-    echo 'export LT_ACCESS_KEY=4hear2v5UZ2nAJ10bsBzjPrxYJgqyEa8T1oa7dvfCL2ZFJtdLG' >> ~/.bashrc
+    echo 'export LT_USERNAME=<username>' >> ~/.bashrc
+    echo 'export LT_ACCESS_KEY=<access key>' >> ~/.bashrc
 
 stages:
   - build
