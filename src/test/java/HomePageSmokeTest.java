@@ -11,6 +11,7 @@
 
         try {
             PreLoginButtons pgeobj = new PreLoginButtons();
+            pgeobj = PageFactory.initElements(driver, PreLoginButtons.class);    
             driver.get("https://qa-hive-swarmio.swarmio.gg/");
             driver.manage().window().maximize();
             String ActualTitle = driver.getTitle();
