@@ -39,10 +39,10 @@ public class PreLoginButtons extends BaseClass {
     @FindBy(xpath = "//*[@id='app']/section/main/section/div/section[2]/div[2]/div/a/span[1]")
     WebElement JoinNow;
 
-    public PreLoginButtons(RemoteWebDriver driver) {
-        this.driver = driver;
-        PageFactory.initElements(driver, this);
-    }
+//     public PreLoginButtons(RemoteWebDriver driver) {
+//         this.driver = driver;
+//         PageFactory.initElements(driver, this);
+//     }
 
     public String ClientName() {
         try {
