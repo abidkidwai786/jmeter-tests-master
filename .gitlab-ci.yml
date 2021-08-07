@@ -2,7 +2,7 @@ image: maven:3.3.9-jdk-8
 
 before_script:
   - |
-    cd /builds/earl/jmeter-tests
+    cd /builds/<gitlab username>/<project-slug-name>
     echo 'export LT_USERNAME=<username>' >> ~/.bashrc
     echo 'export LT_ACCESS_KEY=<access key>' >> ~/.bashrc
 
