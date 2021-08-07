@@ -18,8 +18,8 @@ public class BaseClass {
 
     @BeforeClass
     public void setupApplication() throws MalformedURLException, InterruptedException {
-        String username = "abidk";
-        String authkey = "v9Iv0xTnw4icSAzINW13he2EmdFbmsa3qNCpSIJSBhIoUHHyOn";
+        String username = "<username>";
+        String authkey = "<access key>";
         String hub = "@hub.lambdatest.com/wd/hub";
 
         System.out.println("Test print line");
