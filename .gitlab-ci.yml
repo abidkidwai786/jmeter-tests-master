@@ -1,0 +1,39 @@
+image: maven:3.3.9-jdk-8
+
+before_script:
+  - |
+    cd /builds/earl/jmeter-tests
+    echo 'export LT_USERNAME=earlswarmio' >> ~/.bashrc
+    echo 'export LT_ACCESS_KEY=4hear2v5UZ2nAJ10bsBzjPrxYJgqyEa8T1oa7dvfCL2ZFJtdLG' >> ~/.bashrc
+
+stages:
+  - build
+  - test
+
+build:
+  stage: build
+  script:
+    - mvn compile
+  tags:
+    - cluster
+    - kubernetes
+  artifacts:
+    when: always
+    reports:
+      junit:
+        - target/surefire-reports/TEST-*.xml
+        - target/failsafe-reports/TEST-*.xml
+
+test:
+  stage: test
+  script:
+    - mvn clean test
+  tags:
+    - cluster
+    - kubernetes
+  artifacts:
+    when: always
+    reports:
+      junit:
+        - target/surefire-reports/TEST-*.xml
+        - target/failsafe-reports/TEST-*.xml
